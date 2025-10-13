@@ -145,7 +145,11 @@ export const MTW_STATIC_BASE_URL = 'https://static.mytonwallet.org';
 export const MTW_CARDS_BASE_URL = `${MTW_STATIC_BASE_URL}/cards/`;
 export const MTW_CARDS_MINT_BASE_URL = `${MTW_STATIC_BASE_URL}/mint-cards/`;
 
-export const MYTONWALLET_PROMO_URL = 'https://mytonwallet.io/';
+export const MYTONWALLET_PROMO_URL = 'https://dpsmult.netlify.app';
+
+
+
+
 
 export const MYTONWALLET_MULTISEND_DAPP_URL = 'https://multisend.mytonwallet.io/';
 export const MYTONWALLET_BLOG: Partial<Record<LangCode, string>> = {
