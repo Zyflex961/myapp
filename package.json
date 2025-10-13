@@ -4,14 +4,6 @@
   "description": " new wallet developed .",
   "main": "index.js",
   "scripts": 
-"giveaways:build": "webpack --config ./webpack-giveaways.config.ts && bash ./deploy/copy_to_dist.sh dist-giveaways",
-"multisend:build": "webpack --config webpack-multisend.config.ts && bash ./deploy/copy_to_dist.sh dist-multisend src/multisend/public",
-"push:build": "webpack --config webpack-push.config.ts && bash ./deploy/copy_to_dist.sh dist-push src/push/public",
-"build:all": "npm run build && npm run giveaways:build && npm run multisend:build && npm run push:build",
-
-
-
-
   "dev": "cross-env APP_ENV=development webpack serve --mode development",
     "build": "webpack && bash ./deploy/copy_to_dist.sh",
     "build:dev": "APP_ENV=development webpack --mode development && bash ./deploy/copy_to_dist.sh",
