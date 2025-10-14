@@ -3,6 +3,7 @@ export async function handler(event) {
   const allowedOrigins = [
     'http://localhost:4321',
     'http://127.0.0.1:4321',
+    'https://dpsmult.netlify.app',
     'http://localhost:8888',
     'https://walletdps.netlify.app',
   ];
