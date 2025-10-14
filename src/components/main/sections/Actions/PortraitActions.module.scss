@@ -35,8 +35,8 @@
   font-weight: 600;
   line-height: 0.75rem;
   color: var(--color-black);
-
-  background: var(--color-background-first);
+    background: #f5f6f6e0;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 
   transition: background-color 150ms, color 150ms;
 
