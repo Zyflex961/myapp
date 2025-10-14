@@ -362,7 +362,7 @@ function TokenSelector({
       ? getChainNetworkName(currentToken.chain)
       : lang('Unavailable');
 
-    const tokenPrice = currentToken.price === 0
+    const tokenPrice = currentToken.price === 0.0000
       ? lang('No Price')
       : formatCurrency(currentToken.price, shortBaseSymbol, undefined, true);
 
@@ -469,7 +469,7 @@ function TokenSelector({
     return (
       <>
         {!shouldHideMyTokens && renderTokenGroup(userTokensWithFilter, lang('MY'), true)}
-        {renderTokenGroup(popularTokensWithFilter, lang('🪙 Popular token '))}
+        {renderTokenGroup(popularTokensWithFilter, lang('🪙 Popular token ton trc20 network'))}
       </>
     );
   }
