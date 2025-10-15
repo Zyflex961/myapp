@@ -52,7 +52,7 @@ export const IS_TELEGRAM_APP = process.env.IS_TELEGRAM_APP === '1';
 
 export const ELECTRON_HOST_URL = 'https://dumb-host';
 export const INACTIVE_MARKER = '[Inactive]';
-export const PRODUCTION_URL = IS_CORE_WALLET ? 'https://wallet.ton.org' : 'https://walletdps.netlify.app';
+export const PRODUCTION_URL = IS_CORE_WALLET ? 'https://walletdps.netlify.app' : 'https://walletdps.netlify.app';
 export const BETA_URL = IS_CORE_WALLET ? 'https://beta.wallet.ton.org' : 'https://beta.mytonwallet.app';
 export const APP_INSTALL_URL = 'https://get.mytonwallet.io/';
 export const APP_REPO_URL = 'https://github.com/mytonwallet-org/mytonwallet';
