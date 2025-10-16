@@ -14,15 +14,9 @@ import type { AutolockValueType, LangCode, LangItem, TokenPeriod } from './globa
 
 export const APP_ENV = process.env.APP_ENV;
 
-//export const IS_CORE_WALLET = process.env.IS_CORE_WALLET === '1';
-
 export const IS_CORE_WALLET = false;  // core wallet disable
 
-
-//export const APP_NAME = 'Dps Wallet'; // single name constant
-
-export const APP_NAME = process.env.APP_NAME || (IS_CORE_WALLET ? 'Dps Wallet' : 'Dps Wallet');
-
+export const APP_NAME = 'Dps Wallet'; // single name constant
 
 export const APP_VERSION = process.env.APP_VERSION!;
 export const APP_COMMIT_HASH = process.env.APP_COMMIT_HASH!;
@@ -52,7 +46,7 @@ export const IS_TELEGRAM_APP = process.env.IS_TELEGRAM_APP === '1';
 
 export const ELECTRON_HOST_URL = 'https://dumb-host';
 export const INACTIVE_MARKER = '[Inactive]';
-export const PRODUCTION_URL = IS_CORE_WALLET ? 'https://walletdps.netlify.app' : 'https://walletdps.netlify.app';
+export const PRODUCTION_URL =  'https://walletdps.netlify.app';
 export const BETA_URL = IS_CORE_WALLET ? 'https://beta.wallet.ton.org' : 'https://beta.mytonwallet.app';
 export const APP_INSTALL_URL = 'https://get.mytonwallet.io/';
 export const APP_REPO_URL = 'https://github.com/mytonwallet-org/mytonwallet';
@@ -155,11 +149,8 @@ export const MTW_CARDS_MINT_BASE_URL = `${MTW_STATIC_BASE_URL}/mint-cards/`;
 
 export const MYTONWALLET_PROMO_URL = 'https://dpsmult.netlify.app';
 
-
-
-
-
 export const MYTONWALLET_MULTISEND_DAPP_URL = 'https://dpsmult.netlify.app';
+
 export const MYTONWALLET_BLOG: Partial<Record<LangCode, string>> = {
   en: 'https://mytonwallet.io/en/blog/',
   ru: 'https://mytonwallet.io/ru/blog/',
@@ -167,7 +158,7 @@ export const MYTONWALLET_BLOG: Partial<Record<LangCode, string>> = {
 export const MYTONWALLET_TERMS_OF_USE_URL = 'https://mytonwallet.io/terms-of-use';
 export const MYTONWALLET_PRIVACY_POLICY_URL = 'https://mytonwallet.io/privacy-policy';
 export const TELEGRAM_WEB_URL = 'https://web.telegram.org/a/';
-export const NFT_MARKETPLACE_URL = 'https://getgems.io/';
+export const NFT_MARKETPLACE_URL = 'https://getgems.io/nft/EQDCUj2OLyLazbeh648aO2Sj5yQGS0_VsxDFOdoGfoQCBN63';
 export const NFT_MARKETPLACE_TITLE = NFT_MARKETPLACE_TITLES.getgems;
 export const GETGEMS_BASE_MAINNET_URL = 'https://getgems.io/';
 export const GETGEMS_BASE_TESTNET_URL = 'https://testnet.getgems.io/';
