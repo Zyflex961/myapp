@@ -280,7 +280,7 @@ function App({
   onClose={closeQrScanner}
 />
 
-// ❌ پرانا code comment کیا ہوا (جو صرف capacitor پر چلتا تھا)
+// ❌ old QR Scanner 
 // {IS_CAPACITOR && (
 //   <QrScannerModal
 //     isOpen={isQrScannerOpen}
