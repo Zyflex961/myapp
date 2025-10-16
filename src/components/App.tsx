@@ -271,26 +271,23 @@ function App({
           <UnhideNftModal />
           <NftAttributesModal />
 
-<div style={{ position: 'relative', display: 'inline-block' }}>
-  <QrScannerModal
-    isOpen={isQrScannerOpen}
-    onClose={closeQrScanner}
-  />
-  <span style={{
-    position: 'absolute',
-    top: '10px',
-    left: '10px',
-    background: 'rgba(0,0,0,0.5)',
-    color: 'white',
-    padding: '2px 6px',
-    borderRadius: '4px',
-    fontSize: '14px',
-    zIndex: 1000
+
+    
+<QrScannerModal
+  isOpen={isQrScannerOpen}
+  onClose={closeQrScanner}
+>
+  {/* Inline text inside modal */}
+  <div style={{
+    textAlign: 'center',
+    marginTop: '10px',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    color: '#ffffff'
   }}>
     Open QR Scanner
-  </span>
-</div>
-
+  </div>
+</QrScannerModal>
 
 
 
