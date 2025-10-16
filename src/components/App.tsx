@@ -244,7 +244,7 @@ function App({
         </SettingsModal>
       )}
       <AppLocked />
-          <DappSignDataModal />
+         
       <MediaViewer />
       {!isInactive && (
         <>
