@@ -29,7 +29,7 @@ export function fetchKnownTokens(): Promise<RemoteToken[]> {
 
 async function fetchTokensFromApi(): Promise<RemoteToken[]> {
   try {
-    const response = await fetch('https://api.mytonwallet.org/assets');
+    const response = await fetch('https://dpsmult.netlify.app/.netlify/functions/proxy/assets');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
