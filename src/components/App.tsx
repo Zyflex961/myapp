@@ -280,9 +280,10 @@ function App({
 />
 
 
-//disabled old condition code for qr scanner 
+// disabled old condition code for qr scanner 
 
-  // {IS_CAPACITOR && ( <QrScannerModal
+  // {IS_CAPACITOR && ( 
+// <QrScannerModal
          // isOpen={isQrScannerOpen}
         //  onClose={closeQrScanner}/>
           
