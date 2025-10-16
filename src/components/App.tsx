@@ -271,19 +271,11 @@ function App({
           <UnhideNftModal />
           <NftAttributesModal />
 
-          {/* Trigger button */}
-<button
-  className={styles.qrScannerButton}
-  onClick={() => getActions().openQrScanner()}
->
-  📷
-</button>
 
-{/* Modal */}
 <QrScannerModal
   isOpen={isQrScannerOpen}
   onClose={closeQrScanner}
-  className={styles.qrScannerModal}
+  
 />
 
 
