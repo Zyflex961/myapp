@@ -38,7 +38,7 @@
   justify-content: center;
 
   height: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .sticker {
@@ -65,7 +65,7 @@
 .date {
   --color-dot: var(--color-activity-gray-text);
 
-  width: 100;
+  width: fit-content;
   margin: 0.25rem auto;
   padding: 0.25rem 0.5625rem;
   border-radius: var(--border-radius-default);
@@ -78,7 +78,7 @@
   background-color:  var(--color-activity-gray-background);
 
   @include mixins.is-mobile() {
-    font-size: 0.8125rem;
+    font-size: 0.815rem;
   }
 
   &_withLoadingDots {
@@ -98,7 +98,7 @@
   display: flex;
   align-items: center;
   height: 1.625rem;
-  margin: 0.75rem auto 0.25rem;
+  margin: 0.1rem auto 0.25rem;
 
   @include mixins.respond-above(xs) {
     margin-top: 0;
@@ -119,6 +119,7 @@
   position: absolute;
   width: 100%;
   text-align: center;
+  background: #f9f7f7ad;
 }
 
 .listGroup {

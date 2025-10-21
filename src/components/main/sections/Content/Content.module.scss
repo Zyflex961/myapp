@@ -101,7 +101,8 @@
     top: var(--sticky-card-height);
 
     width: 100%;
-    height: 2.75rem;
+    height: 2.2rem;
+    background: #6991a91c;
   }
 
   .tabsContent {
@@ -113,11 +114,11 @@
   .tabsOverlay {
     display: inline-flex;
     max-width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
   }
 
   .tab {
-    padding: 0.75rem 0 0.25rem;
+    padding: 0.30rem 0 0.25rem;
   }
 
   .slides {
@@ -144,6 +145,7 @@
     overflow: hidden;
     flex: 1 1 auto;
     min-height: 0;
+    background: linear-gradient(61deg, #d497db59, #b38cd16b, #00000026);
   }
 }
 
@@ -153,10 +155,9 @@
   }
 
   .tabs {
-    padding: 0.625rem;
+    padding: 0.625rem ;
     border-radius: var(--border-radius-default) var(--border-radius-default) 0 0;
-    background-color: var(--color-background-first);
-  }
+    background: linear-gradient(180deg, rgb(151 200 219 / 42%), rgb(229 161 196 / 19%), rgb(194 92 213 / 30%));  }
 
   .tabsOverlay {
     top: 0.625rem;

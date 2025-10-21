@@ -45,7 +45,7 @@
       }
 
       &::after {
-        opacity: 1;
+        opacity: 2;
       }
     }
 
@@ -62,15 +62,15 @@
 
   @include mixins.respond-above(xs) {
     position: relative;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.50rem;
     border-radius: var(--border-radius-default);
     background-color: var(--color-background-first);
+        background: linear-gradient(180deg, rgb(151 200 219 / 42%), rgb(229 161 196 / 19%), rgb(194 92 213 / 30%));
   }
 }
 
 .headerInner {
   position: relative;
-
   max-width: v.$portraitContentMaxWidth;
   height: calc(#{v.$portraitHeaderHeight} + var(--safe-area-top, 0px));
   margin: 0 auto;
@@ -80,7 +80,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     height: auto;
     padding: 0 0.8125rem;
   }

@@ -34,11 +34,15 @@
     "electron:package": "npm run electron:build && npx rimraf dist-electron && electron-builder build --win --mac --linux --config src/electron/config.yml",
     "electron:package:staging": "ENV=staging npm run electron:package -- -p never",
     "electron:release:production": "ENV=production npm run electron:package -- -p always",
+    
     "telegram:dev": "cross-env IS_TELEGRAM_APP=1 npm run dev",
     "telegram:build": "IS_TELEGRAM_APP=1 npm run build",
+      "build:telegram": "cross-env IS_TELEGRAM_APP=1 APP_ENV=telegram webpack --mode production && bash ./deploy/copy_to_dist.sh dist/telegram",
+
     "telegram:build:dev": "cross-env APP_ENV=development npm run telegram:build",
     "telegram:build:staging": "cross-env APP_ENV=staging npm run telegram:build",
     "telegram:build:production": "npm run telegram:build",
+    
     "mobile:build:sdk": "bash ./deploy/build_sdk.sh",
     "mobile:build": "npm run mobile:build:sdk && cross-env IS_CAPACITOR=1 npm run build && cap sync",
     "mobile:build:dev": "cross-env APP_ENV=development npm run mobile:build",
@@ -182,9 +186,9 @@
     "stylelint-order": "7.0.0",
     "typescript": "5.8.3",
     "typescript-eslint": "8.32.1",
-    "webpack": "^5.99.9",
+    "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.1"
+    "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
     "@awesome-cordova-plugins/core": "6.16.0",

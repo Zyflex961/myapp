@@ -10,9 +10,7 @@ $subheaderReleaseHeight: 1.25rem;
 .item {
   $leftPadding: 0.75rem;
   $iconColumnWidth: 2.875rem;
-
   --border-radius-value: 0.25rem;
-
   position: relative;
 
   display: grid;
@@ -23,8 +21,7 @@ $subheaderReleaseHeight: 1.25rem;
   justify-content: center;
 
   width: 100%;
-  padding: 0.625rem 1rem 0.625rem $leftPadding;
-
+  padding: 0.25rem 1rem 0.25rem $leftPadding;
   color: var(--color-black);
   text-align: left;
 
@@ -178,7 +175,6 @@ $subheaderReleaseHeight: 1.25rem;
   gap: 0.25rem;
   align-items: baseline;
   justify-content: space-between;
-
   min-width: 0;
 
   white-space: nowrap;

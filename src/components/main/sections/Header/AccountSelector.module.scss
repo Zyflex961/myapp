@@ -142,9 +142,8 @@ $iconGapSize: 1rem;
   margin: 0 auto;
   padding: 0.5rem !important;
   border-radius: var(--border-radius-default);
-
-  background-color: var(--color-background-drop-down);
-  box-shadow: var(--default-shadow);
+  background-color: #b38882ed;
+  box-shadow: 0px 6px 1rem 1px #f1f903;
 
   transition: var(--dropdown-transition), scrollbar-color 300ms !important;
 
