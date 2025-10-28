@@ -8,10 +8,11 @@ export async function handler(event) {
     'http://127.0.0.1:4323',
     'http://localhost:8888',
     'http://127.0.0.1:8888',
-    'https://dpsmult.netlify.app',
+    'https://dpsmult.netlify.app',  // DPS MultiSend manifest domain
+    'https://walletdpstg.netlify.app',  // telegram mini app domain
     'https://walletdps.netlify.app',
     'https://walletdps.netlify.com',
-    ...(process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',').map(o => o.trim()) : []),
+    ...(process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',').map((o) => o.trim()) : []),
   ];
 
   const origin = event.headers.origin || '';
