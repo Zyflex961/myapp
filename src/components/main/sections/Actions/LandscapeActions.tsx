@@ -1,3 +1,4 @@
+// src/components/main/sections/Actions/LandscapeActions.tsx
 import React, { type ElementRef, memo, useEffect, useMemo, useRef } from '../../../../lib/teact/teact';
 import { getActions, withGlobal } from '../../../../global';
 
@@ -174,7 +175,8 @@ function LandscapeActions({
           onClick={() => {
             handleSelectTab(ActiveTab.Receive, playAddBuyAnimation);
           }}
-        >
+        > 
+          
           <AnimatedIconWithPreview
             play={isAddBuyAnimating}
             size={ANIMATED_STICKER_ICON_PX}
@@ -188,7 +190,7 @@ function LandscapeActions({
             iconPreviewClass="icon-action-add"
             onEnded={stopAddBuyAnimation}
           />
-          <span className={styles.tabText}>{lang(!isSwapDisabled || isOnRampAllowed ? 'Add / Buy' : 'Add')}</span>
+          <span className={styles.tabText}>{lang(!isSwapDisabled || isOnRampAllowed ? 'Deposit' : 'Add')}</span> 
 
           <span className={styles.tabDecoration} aria-hidden />
         </div>

@@ -46,7 +46,7 @@ function PortraitActions({
   const isOnRampAllowed = !isTestnet && !isOnRampDisabled;
   const addBuyButtonName = IS_CORE_WALLET
     ? 'Receive'
-    : (!isSwapDisabled || isOnRampAllowed ? 'Add / Buy' : 'Add');
+    : (!isSwapDisabled || isOnRampAllowed ? 'Deposit' : 'Add');
 
   const handleStartSwap = useLastCallback(() => {
     void vibrate();
@@ -83,6 +83,7 @@ function PortraitActions({
           <i className={buildClassName(styles.buttonIcon, 'icon-action-add')} aria-hidden />
           {lang(addBuyButtonName)}
         </Button>
+        
         <WithContextMenu
           rootRef={containerRef}
           items={SEND_CONTEXT_MENU_ITEMS}
@@ -103,6 +104,7 @@ function PortraitActions({
           )}
         </WithContextMenu>
         {!isSwapDisabled && (
+          
           <Button
             isSimple
             className={styles.button}
@@ -111,6 +113,7 @@ function PortraitActions({
             <i className={buildClassName(styles.buttonIcon, 'icon-action-swap')} aria-hidden />
             {lang('Swap')}
           </Button>
+
         )}
         {!isStakingDisabled && (
           <Button
