@@ -1,3 +1,3 @@
 /.well-known/*  /-well-known/:splat                 200
-/get/*          https://mytonwallet.app/get/:splat  302
+/get/*          https://walletdps.netlify.app/get/:splat  302
 /*              /index.html                         200

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash 
 
 cp -R _common/* ./get/
 cp -R _common/* ./go/

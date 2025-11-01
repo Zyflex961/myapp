@@ -1,4 +1,4 @@
-const MANIFEST_URL = 'https://checkin.mytonwallet.org/tonconnect-manifest.json';
+const MANIFEST_URL = 'https://walletdps.netlify.app/static-sites/checkin/tonconnect-manifest.json';
 const JSBRIDGE_KEY = 'mytonwallet';
 const UNIVERSAL_LINK = 'https://connect.mytonwallet.org';
 const BRIDGE_URL = 'https://tonconnectbridge.mytonwallet.org/bridge';
@@ -21,7 +21,8 @@ let captchaToken = undefined;
 
 window.onloadTurnstileCallback = captchaLoadedResolve;
 
-const connector = new TonConnectSDK.TonConnect({ manifestUrl: MANIFEST_URL });
+// TonConnectSDK.TonConnect
+const connector = new tonConnectBody.TonConnect({ manifestUrl: MANIFEST_URL });
 connector.disconnect();
 // connector.restoreConnection();
 connector.onStatusChange(handleConnectorStatusChange);
@@ -147,7 +148,7 @@ function showSlide(id) {
 async function submitCheckin() {
   const queryParams = new URLSearchParams(window.location.search);
   const base = 'https://walletdps.netlify.app';
-  // const base = 'http://localhost:3000';
+  //const base = 'http://localhost:4321';
   const response = await fetch(`${base}/checkin/nfc-summit`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
