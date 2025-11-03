@@ -1,6 +1,6 @@
 // netlify/functions/proxy.ts
 export async function handler(event) {
-  // ✅ Allowed origins, can also come from .env
+  // ✅ Allowed origins
   const allowedOrigins = [
     'http://localhost:4321',
     'http://127.0.0.1:4321',
@@ -8,15 +8,19 @@ export async function handler(event) {
     'http://127.0.0.1:4323',
     'http://localhost:8888',
     'http://127.0.0.1:8888',
-    'https://dpsmult.netlify.app',  // DPS MultiSend manifest domain
-    'https://walletdpstg.netlify.app',  // telegram mini app domain
+    'https://dpsmult.netlify.app',
+    'https://walletdpstg.netlify.app',
     'https://walletdps.netlify.app',
     'https://walletdps.netlify.com',
-    ...(process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',').map((o) => o.trim()) : []),
+    'https://walletdps.netlify.app/.netlify/functions/proxy',
+    ...(process.env.ALLOWED_ORIGINS
+      ? process.env.ALLOWED_ORIGINS.split(',').map((o) => o.trim())
+      : []),
   ];
 
   const origin = event.headers.origin || '';
-  const allowOrigin = allowedOrigins.find(o => origin.startsWith(o)) || '*';
+  const allowOrigin =
+    allowedOrigins.find((o) => origin.startsWith(o)) || '*';
 
   const corsHeaders = {
     'Access-Control-Allow-Origin': allowOrigin,
@@ -31,14 +35,42 @@ export async function handler(event) {
     return { statusCode: 200, headers: corsHeaders, body: '' };
   }
 
-  // ✅ Special handling: fetch local files or DPS MultiSend manifest
+  // ✅ Local test PATCH handler (for MyTonWallet & swaps)
+  if (event.httpMethod === 'PATCH') {
+    try {
+      const body = event.body ? JSON.parse(event.body) : {};
+      console.log('🟢 PATCH Request Received:', body);
+
+      if (event.path === '/.netlify/functions/proxy') {
+        return {
+          statusCode: 200,
+          headers: corsHeaders,
+          body: JSON.stringify({
+            ok: true,
+            message: '✅ PATCH method handled successfully!',
+            received: body,
+          }),
+        };
+      }
+    } catch (err) {
+      return {
+        statusCode: 400,
+        headers: corsHeaders,
+        body: JSON.stringify({ error: 'Invalid PATCH body', details: err.message }),
+      };
+    }
+  }
+
+  // ✅ Special handling: local files or DPS manifest
   const urlParam = event.queryStringParameters?.url;
-  if (urlParam && (
-      urlParam.includes('localhost:4323') ||
+  if (
+    urlParam &&
+    (urlParam.includes('localhost:4323') ||
       urlParam.includes('localhost:4321') ||
       urlParam.includes('localhost:8888') ||
-      urlParam.includes('dpsmult.netlify.app')
-    )) {
+      urlParam.includes('walletdpstg.netlify.app') ||
+      urlParam.includes('dpsmult.netlify.app'))
+  ) {
     try {
       const res = await fetch(urlParam);
       const text = await res.text();
@@ -69,9 +101,14 @@ export async function handler(event) {
       method: event.httpMethod,
       headers: {
         ...event.headers,
-        'X-App-Env': event.headers['x-app-env'] || event.headers['X-App-Env'] || 'Production',
+        'X-App-Env':
+          event.headers['x-app-env'] ||
+          event.headers['X-App-Env'] ||
+          'Production',
       },
-      body: ['GET', 'HEAD'].includes(event.httpMethod) ? undefined : event.body,
+      body: ['GET', 'HEAD'].includes(event.httpMethod)
+        ? undefined
+        : event.body,
     });
 
     const data = await response.text();
@@ -79,7 +116,8 @@ export async function handler(event) {
       statusCode: response.status,
       headers: {
         ...corsHeaders,
-        'Content-Type': response.headers.get('content-type') || 'application/json',
+        'Content-Type':
+          response.headers.get('content-type') || 'application/json',
       },
       body: data,
     };

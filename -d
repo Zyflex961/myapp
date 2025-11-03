@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+server: Netlify
+x-nf-request-id: 01K9273A728JP0FKHZPF62N3GA
+x-powered-by: Express
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, PATCH, DELETE, OPTIONS
+access-control-allow-headers: x-app-env, X-App-Env, X-App-Version, X-Requested-With, Content-Type, Authorization, Origin, Accept, X-App-Clientid, x-auth-token, X-Auth-Token, Referer, User-Agent, Cache-Control, Pragma
+access-control-max-age: 86400
+date: Sun, 02 Nov 2025 12:01:30 GMT
+connection: close
+transfer-encoding: chunked
+
+{"ok":true,"message":"✅ PATCH method handled successfully!","received":{}}

@@ -317,11 +317,14 @@ export const TOKEN_FONT_ICONS = {
 
 export const TRC20_USDT_MAINNET_SLUG = 'tron-tr7nhqjekq';
 export const TRC20_USDT_TESTNET_SLUG = 'tron-tg3xxyexbk';
+
 export const TON_USDT_MAINNET_SLUG = 'ton-eqcxe6mutq';
 export const TON_USDT_TESTNET_SLUG = 'ton-kqd0gkbm8z'; // Where to get this token: https://t.me/testgiver_ton_usdt_bot
+
 export const STAKED_TON_SLUG = 'ton-eqcqc6ehrj';
 export const STAKED_MYCOIN_SLUG = 'ton-eqcbzvsfwq';
 export const TRX_SWAP_COUNT_FEE_ADDRESS = 'TGfgtSZJjXaYpCfGtB4Khuii1HR9bHP56M';
+
 export const MYCOIN_STAKING_POOL = 'EQC3roTiRRsoLzfYVK7yVVoIZjTEqAjQU3ju7aQ7HWTVL5o5';
 
 export const ETHENA_STAKING_VAULT = 'EQChGuD1u0e7KUWHH5FaYh_ygcLXhsdG2nSHPXHW8qqnpZXW';
