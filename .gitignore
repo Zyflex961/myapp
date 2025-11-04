@@ -7,3 +7,26 @@ node_modules/
 .netlify
 disable/
 
+# Node modules
+node_modules/
+node_modules 
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# Netlify related folders
+.netlify/
+netlify/
+disable/
+
+# Logs and cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+.cache/
+dist/
+build/
