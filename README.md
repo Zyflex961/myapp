@@ -28,10 +28,10 @@ _local development commands_
 npm run dev 
 ```
 
-**for developing outputbdist
+** for developing outputb dist
 
 ```
-**npm run build**
+npm run build
 ```
 
 
