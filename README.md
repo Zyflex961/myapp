@@ -1,4 +1,4 @@
-## 🪙 [Walletdps TON & TRC20](https://walletdps.netlify.app)
+## 🪙 [TON TRC20](https://walletdps.netlify.app)
 
 The wallet is **self-custodial and safe**. The developers **do not** have access to funds, browser history or any other information. We focus on **speed**, **size** and **attention to detail**. We try to avoid using third-party libraries to ensure maximum reliability and safety, and also to lower the bundle size.
 
@@ -24,7 +24,7 @@ http://t.me/DPSwallet_bot/?startapp
 
 User Interface for the DPS wallet Giveaways APP. This app will help the user complete their task.
 
-
+this app is under developing 
 .
 
 
@@ -32,13 +32,13 @@ User Interface for the DPS wallet Giveaways APP. This app will help the user com
 
 To run the app, you need to define the following variables in the `.env` file:
 
-## Development Mode
+# Development Mode
 To start the app in development mode, run:
 
 ```sh
 npm run giveaways:dev
 ```
-## Build To build the app, run:
+# Build To build the app, run:
 
 ```sh
 npm run giveaways:build
