@@ -24,7 +24,9 @@ http://t.me/DPSwallet_bot/?startapp
 To run the app, you need to define the following variables in the `.env` file:
 
 
-- **🌐local development commands**
+
+
+- **🌐 local development commands**
 
 ```
 npm run dev 
@@ -41,7 +43,7 @@ npm run build
 ```
 
 
-- 💰 **MyTonWallet Giveaway**
+# 💰 **Giveaway Command**
 
 User Interface for the DPS wallet Giveaways APP. This app will help the user complete their task.
 
@@ -55,7 +57,7 @@ To start the app in development mode, run:
 ```sh
 npm run giveaways:dev
 ```
-# Build To build the app, run:
+- 🖥️ Build To build the app, run:
 
 ```sh
 npm run giveaways:build
